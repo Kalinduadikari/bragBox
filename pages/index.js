@@ -19,7 +19,7 @@ const Page = () => {
     <Container>
         
       <Box borderRadius="lg" bg={useColorModeValue("whiteAlpha.500", "whiteAlpha.200")} p={3} textAlign="center" mb={6}>
-        Hello, I'm a fresh graduate software engineer!!
+      Hello, I&apos;m a fresh graduate software engineer!!
       </Box>
 
       <Box display={{ md: "flex" }}>
@@ -108,7 +108,7 @@ const Page = () => {
         </BioSection>
         <BioSection>
             <BioYear>2023</BioYear>
-            Successfully completed a Bachelor's (Hons) in Computer Science (Software Engineering) from Plymouth University, UK 🇬🇧.
+            Successfully completed a Bachelors (Hons) in Computer Science (Software Engineering) from Plymouth University, UK 🇬🇧.
         </BioSection>
         </Section>
 
@@ -125,7 +125,7 @@ const Page = () => {
           >
         <Heading variant="section-title" ml='-49px'>
         </Heading>
-        <Para text-align="left">#🎙️Tunin' in to podcasts &nbsp; #groovin' to the beats&nbsp;  #flippin' pages&nbsp;  #spillin'_my_mind_on_twitter&nbsp; #🏋️Sweatin' it out</Para>
+        <Para text-align="left">#🎙️Tunin' in to podcasts &nbsp; #groovin to the beats&nbsp;  #flippin pages&nbsp;  #spillin_my_mind_on_twitter&nbsp; #🏋️Sweatin it out</Para>
         </Section>
 
         <Section
@@ -145,13 +145,13 @@ const Page = () => {
         
         <Box bg={useColorModeValue("gray.100", "gray.800")} borderRadius="md" width="570px" p={4}  ml={-8} boxShadow="lg">
         <Text textAlign="left" fontStyle="italic" fontSize="xl">
-          "Pain is inevitable, suffering is optional." - Haruki Murakami
+        &quot;Pain is inevitable, suffering is optional.&quot; - Haruki Murakami
         </Text>
       </Box>
 
       <Box mt={8} bg={useColorModeValue("gray.100", "gray.800")} borderRadius="md" width="570px" p={4}  ml={-8} boxShadow="lg">
         <Text textAlign="left" fontStyle="italic" fontSize="xl">
-          “Every man has two lives, and the second starts when he realizes he has just one”― Confucius
+        &quot;Every man has two lives, and the second starts when he realizes he has just one&quot;― Confucius
         </Text>
       </Box>
               </Section>
