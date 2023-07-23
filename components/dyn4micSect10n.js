@@ -7,7 +7,6 @@ const StyledDiv = chakra(motion.div);
 const DySection = ({
   children,
   initial = "hidden",
-  animate = "visible",
   exit = "hidden",
   hoverVariants = {
     scale: 1.02,

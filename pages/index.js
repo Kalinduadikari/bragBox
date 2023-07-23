@@ -70,7 +70,7 @@ const Page = () => {
             <Heading as="h3" variant="section-title" ml='-49px'>
               Work
             </Heading>
-            <Para>Kalindu Adikari, a dynamic full-stack developer fresh out of university. Beyond code, he explores the mysteries of the human mind, drawing inspiration from neuroscience, psychology, and the wisdom of thinkers like Marcus Aurelius. Together, let's craft transformative digital experiences that captivate hearts and minds. </Para>
+            <Para>Kalindu Adikari, a dynamic full-stack developer fresh out of university. Beyond code, he explores the mysteries of the human mind, drawing inspiration from neuroscience, psychology, and the wisdom of thinkers like Marcus Aurelius. Together, let&apos;s craft transformative digital experiences that captivate hearts and minds. </Para>
             <Box align='center' my={4}>
             <Link as={NextLink} href="/w9rks" passHref>
                      <Button rightIcon={<ChevronRightIcon/>} colorScheme="gray">
@@ -125,7 +125,7 @@ const Page = () => {
           >
         <Heading variant="section-title" ml='-49px'>
         </Heading>
-        <Para text-align="left">#🎙️Tunin' in to podcasts &nbsp; #groovin to the beats&nbsp;  #flippin pages&nbsp;  #spillin_my_mind_on_twitter&nbsp; #🏋️Sweatin it out</Para>
+        <Para text-align="left">#🎙️Tunin&apos; in to podcasts &nbsp; #groovin to the beats&nbsp;  #flippin pages&nbsp;  #spillin_my_mind_on_twitter&nbsp; #🏋️Sweatin it out</Para>
         </Section>
 
         <Section

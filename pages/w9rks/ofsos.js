@@ -8,7 +8,7 @@ import { WorksProvider } from '../../components/w9rkStruct';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
-function changeFirstWordColor(sentence, word, color) {
+function changeFirstWordColor(sentence, word) {
   const index = sentence.indexOf(word);
   if (index === -1) return sentence;
   return (
