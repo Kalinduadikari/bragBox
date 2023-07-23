@@ -1,11 +1,12 @@
 import { Suspense } from "react";
 import Head from 'next/head'
-import Navbar from '../navbar'
+import Navbar from '../n4vB4r'
 import { Box, Container } from '@chakra-ui/react'
- 
+import Model from "../ezy3d";
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
-import Model from '../Ez3d';
+
+
 
 
 const Main = ({ children, router }) => {
@@ -15,7 +16,7 @@ const Main = ({ children, router }) => {
         <Box as='main' pb={8}>
             <Head>
                 <meta name='viewport' content='width=device-width, initial-scale=1'/>
-                <title>Kalindu Adikari - Homepage</title>
+                <title>Kalindu Adikari</title>
             </Head>
 
             <Navbar path={router.asPath} />

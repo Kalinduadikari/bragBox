@@ -1,17 +1,16 @@
-import { Box, Button, Container, Heading, Image, Link, useColorModeValue } from "@chakra-ui/react";
-import Section from "../components/section";
+import { Box, Button, Container, Heading, Image, Link, Text, useColorModeValue } from "@chakra-ui/react";
+import Section from "../components/sect10n";
 import { motion, AnimatePresence } from "framer-motion"; 
-import Para from "../components/para";
+import Para from "../components/p4ra";
 import { ChevronRightIcon, } from "@chakra-ui/icons";
 import NextLink from 'next/link';
-import { BioSection, BioYear } from "../components/LifeBits";
-import Layout from '../components/layouts/SwishyPg';
+import { BioSection, BioYear } from "../components/l1f3B1ts";
+import Layout from "../components/layouts/sw1shyP9";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTwitter, faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faTwitter, faLinkedin, faGithub, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 
 const Page = () => {
-  const initialModelScale = 0.1 * 0.1; 
   return (
     <>
     
@@ -36,6 +35,9 @@ const Page = () => {
                 </Link>
                 <Link href="https://github.com/Kalinduadikari" isExternal mx={2}>
                   <FontAwesomeIcon color="#C04970" icon={faGithub} size="lg" />
+                </Link>
+                <Link href="https://www.instagram.com/k4lee.adi/" isExternal mx={2}>
+                  <FontAwesomeIcon color="#C04970" icon={faInstagram} size="lg" />
                 </Link></p>   
           
                 
@@ -43,7 +45,7 @@ const Page = () => {
               
         </Box>
         <Box flexShrink={0} mt={{ base: 4, md: 0 }} ml={{ md: 6 }} align="center">
-          <Image borderColor="whiteAlpha.800" borderWidth={2} borderStyle="solid" maxWidth="100px" display="inline-block" borderRadius="full" src="/images/org.jpeg" alt="Profile Image" />
+          <Image borderColor="whiteAlpha.800" borderWidth={2} borderStyle="solid" maxWidth="100px" display="inline-block" borderRadius="full" src="/images/avi.jpg" alt="Profile Image" />
         </Box>
       </Box>
 
@@ -125,6 +127,34 @@ const Page = () => {
         </Heading>
         <Para text-align="left">#🎙️Tunin' in to podcasts &nbsp; #groovin' to the beats&nbsp;  #flippin' pages&nbsp;  #spillin'_my_mind_on_twitter&nbsp; #🏋️Sweatin' it out</Para>
         </Section>
+
+        <Section
+                hoverVariants={{
+                  scale: 1.05,
+                  transition: { duration: 0.3 },
+                }}
+                p={8}
+                boxShadow="none"
+                borderRadius="md"
+                parallaxSensitivity={0.15}
+                mt={0.5}
+              >
+              <Heading variant="section-title" ml='-49px'>
+              Top Quips
+        </Heading>
+        
+        <Box bg={useColorModeValue("gray.100", "gray.800")} borderRadius="md" width="570px" p={4}  ml={-8} boxShadow="lg">
+        <Text textAlign="left" fontStyle="italic" fontSize="xl">
+          "Pain is inevitable, suffering is optional." - Haruki Murakami
+        </Text>
+      </Box>
+
+      <Box mt={8} bg={useColorModeValue("gray.100", "gray.800")} borderRadius="md" width="570px" p={4}  ml={-8} boxShadow="lg">
+        <Text textAlign="left" fontStyle="italic" fontSize="xl">
+          “Every man has two lives, and the second starts when he realizes he has just one”― Confucius
+        </Text>
+      </Box>
+              </Section>
         </motion.div>
       </AnimatePresence>
     </Container>
