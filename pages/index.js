@@ -112,6 +112,8 @@ const Page = () => {
         </BioSection>
         </Section>
 
+
+
           <Section
             hoverVariants={{
               scale: 1.05,
@@ -128,7 +130,11 @@ const Page = () => {
         <Para text-align="left">#🎙️Tunin&apos; in to podcasts &nbsp; #groovin to the beats&nbsp;  #flippin pages&nbsp;  #spillin_my_mind_on_twitter&nbsp; #🏋️Sweatin it out</Para>
         </Section>
 
+
+
+        {/* Quotes Section */}
         <Section
+                id="quotes"
                 hoverVariants={{
                   scale: 1.05,
                   transition: { duration: 0.3 },
@@ -139,21 +145,40 @@ const Page = () => {
                 parallaxSensitivity={0.15}
                 mt={0.5}
               >
-              <Heading variant="section-title" ml='-49px'>
-              Top Quips
-        </Heading>
-        
-        <Box bg={useColorModeValue("gray.100", "gray.800")} borderRadius="md" width="570px" p={4}  ml={-8} boxShadow="lg">
-        <Text textAlign="left" fontStyle="italic" fontSize="xl">
-        &quot;Pain is inevitable, suffering is optional.&quot; - Haruki Murakami
-        </Text>
-      </Box>
+                <Heading variant="section-title" ml="-49px">
+                  Top Quips
+                </Heading>
 
-      <Box mt={8} bg={useColorModeValue("gray.100", "gray.800")} borderRadius="md" width="570px" p={4}  ml={-8} boxShadow="lg">
-        <Text textAlign="left" fontStyle="italic" fontSize="xl">
-        &quot;Every man has two lives, and the second starts when he realizes he has just one&quot;― Confucius
-        </Text>
-      </Box>
+                
+                <Box
+                  mt={8}
+                  bg={useColorModeValue("gray.100", "gray.800")}
+                  borderRadius="md"
+                  p={4}
+                  ml={[-2, -4, -8]} 
+                  width={["auto", "auto", "570px"]} 
+                  boxShadow="lg"
+                >
+                  <Text textAlign="left" fontStyle="italic" fontSize="xl">
+                    &quot;Pain is inevitable, suffering is optional.&quot; - Haruki Murakami
+                  </Text>
+                </Box>
+
+                
+                <Box
+                  mt={8}
+                  bg={useColorModeValue("gray.100", "gray.800")}
+                  borderRadius="md"
+                  p={4}
+                  ml={[-2, -4, -8]} 
+                  width={["auto", "auto", "570px"]} 
+                  boxShadow="lg"
+                >
+                  <Text textAlign="left" fontStyle="italic" fontSize="xl">
+                    &quot;Every man has two lives, and the second starts when he realizes he has just one&quot;―
+                    Confucius
+                  </Text>
+                </Box>
               </Section>
         </motion.div>
       </AnimatePresence>
