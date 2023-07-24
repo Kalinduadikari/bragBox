@@ -1,6 +1,6 @@
 import Logo from "./l0g0";
 import NextLink from 'next/link';
-import { Box, Container, Flex, Heading, IconButton, Link, Menu, MenuButton, MenuItem, MenuList, Stack, useColorModeValue } from "@chakra-ui/react";
+import { Box, Container, Flex, Heading, IconButton, Link, Menu, MenuButton, MenuList, Stack, useColorModeValue } from "@chakra-ui/react";
 import  { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeFlipper from "./themeFl1pp3r";
 
