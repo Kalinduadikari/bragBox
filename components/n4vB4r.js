@@ -61,24 +61,43 @@ const Navbar = props => {
                     </Stack>
             <Box ml="auto" display="flex" alignItems="center">
                 <ThemeFlipper />
-                    <Box ml={2} display={{base: 'inline-block', md: 'none'}}>
-                        <Menu>
-                            <MenuButton as={IconButton} icon={<HamburgerIcon/>} variant='outline' arial-label='Options'/>
-                            <MenuList>
-                                <Link as={NextLink} href="/" passHref>
-                                    <MenuItem>About</MenuItem>
-                                </Link>
-                                <Link as={NextLink} href="/w9rks" passHref>
-                                    <MenuItem>Works</MenuItem>
-                                </Link>
-                                <Link as={NextLink} href="/posts" passHref>
-                                    <MenuItem>Posts</MenuItem>
-                                </Link>
+                
+                    
+                         <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
+                                <Menu>
+                                <MenuButton
+                                    as={IconButton}
+                                    icon={<HamburgerIcon />}
+                                    variant='outline'
+                                    arial-label='Options'
+                                    transition="all 0.2s"
+                                />
+                                <MenuList
+                                    transformOrigin="top right"
+                                    mt={2}
+                                    minWidth="200px"
+                                    boxShadow={useColorModeValue('lg', 'dark-lg')}
+                                    bg={useColorModeValue('white', 'gray.800')}
+                                    rounded="md"
+                                    zIndex={2}
+                                >
+                                    <LinkItem href="/" path={path}>
+                                    About
+                                    </LinkItem>
+                                    <LinkItem href="/w9rks" path={path}>
+                                    Works
+                                    </LinkItem>
+                                    <LinkItem href="/posts" path={path}>
+                                    Posts
+                                    </LinkItem>
                                 </MenuList>
-                        
-                        </Menu>
+                                </Menu>
+                            
+                            </Box>
+
+
                     </Box>
-                </Box>
+                 
             </Container>
 
         </Box>
