@@ -155,7 +155,7 @@ const Page = () => {
           display="block" 
           mx="auto" 
           mt={4} 
-          src="/images/book.jpg"
+          src="/images/book.JPG"
           alt="Book Image"
           loading="lazy"
           boxShadow="lg" 
