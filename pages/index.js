@@ -143,7 +143,7 @@ const Page = () => {
             mt={0.5}
           >
         <Heading variant="section-title" ml='-49px'>
-        The book I'm currently wrapped up in:
+        The book I&apos;m currently wrapped up in:
         
         </Heading>
         <Para text-align="left"></Para>
