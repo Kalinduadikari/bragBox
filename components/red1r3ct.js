@@ -9,11 +9,11 @@ export const ContentTemp = ({ children, id, title, lng, descr }) => (
       <Heading fontFamily="inter" fontSize='8px' letterSpacing='2.6px'>
           {lng}
         </Heading>
-        <Heading fontFamily="inter" fontSize='25px' variant="section-title" ml='-25px' textShadow='none'>
+        <Heading fontFamily="inter" fontSize='55px' variant="section-title" ml='-25px' textShadow='none'>
           {title}
         </Heading>
         <Box ml="14px" fontFamily='inter' fontWeight='500' fontSize='12px' opacity='0.7'> 
-          <Para>{descr}</Para>
+         <Para style={{ textIndent: '0' }}>{descr}</Para>
         </Box>
       </LinkOverlay>
     </NextLink>

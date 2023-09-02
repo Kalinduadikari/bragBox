@@ -70,7 +70,7 @@ const Page = () => {
             <Heading as="h3" variant="section-title" ml='-49px'>
               Work
             </Heading>
-            <Para>Kalindu Adikari, a dynamic full-stack developer fresh out of university. Beyond code, he explores the mysteries of the human mind, drawing inspiration from neuroscience, psychology, and the wisdom of thinkers like Marcus Aurelius. Together, let&apos;s craft transformative digital experiences that captivate hearts and minds. </Para>
+            <Para>I&apos;m Kalindu Adikari, a recent graduate with a passion for data science. Eager to embark on this exciting journey, I&apos;m here to leverage my skills and knowledge to unlock the potential hidden within data. Inspired by fields like neuroscience, psychology, and the wisdom of thinkers like Marcus Aurelius, I&apos;m ready to dive into the world of data and analytics. Let&apos;s explore the endless possibilities of data science together and make a meaningful impact.</Para>
             <Box align='center' my={4}>
             <Link as={NextLink} href="/w9rks" passHref>
                      <Button rightIcon={<ChevronRightIcon/>} colorScheme="gray">
@@ -128,6 +128,39 @@ const Page = () => {
         <Heading variant="section-title" ml='-49px'>
         </Heading>
         <Para text-align="left">#🎙️Tunin&apos; in to podcasts &nbsp; #groovin to the beats&nbsp;  #flippin pages&nbsp;  #spillin_my_mind_on_twitter&nbsp; #🏋️Sweatin it out</Para>
+        </Section>
+
+
+        <Section
+            hoverVariants={{
+              scale: 1.05,
+              transition: { duration: 0.3 },
+            }}
+            p={8}
+            boxShadow = "none"
+            borderRadius="md"
+            parallaxSensitivity={0.15}
+            mt={0.5}
+          >
+        <Heading variant="section-title" ml='-49px'>
+        The book I'm currently wrapped up in:
+        
+        </Heading>
+        <Para text-align="left"></Para>
+        <Image
+          borderColor="transparent"
+          borderWidth="2px"
+          borderStyle="solid"
+          borderRadius="full" 
+          display="block" 
+          mx="auto" 
+          mt={4} 
+          src="/images/book.jpg"
+          alt="Book Image"
+          loading="lazy"
+          boxShadow="lg" 
+          maxWidth="300px" 
+        />
         </Section>
 
 
