@@ -24,7 +24,7 @@ function changeFirstWordColor(sentence, word) {
 }
 
 const FeatureItem = ({ text }) => (
-  <ListItem color="grey" fontFamily="Inter" opacity="0.6" fontSize="lg" mb="2">
+  <ListItem color="#555" fontFamily="Inter" opacity="0.7" fontSize="lg" mb="2">
     <Flex align="center">
       {text}
     </Flex>
@@ -52,7 +52,7 @@ const boxfitproData = {
       id: 1,
       content: (
         <div key={1}>
-          <strong style={{ color: 'White' }}>Efficient Box Packing:</strong>
+          <Heading mb="-15px" mt="10px" fontFamily="inter" fontSize="22px">Efficient Box Packing:</Heading>
           <br />
           The algorithm sorts the boxes by volume, placing larger boxes first for better packing efficiency.
           <br />
@@ -64,7 +64,7 @@ const boxfitproData = {
       id: 2,
       content: (
         <div key={2}>
-          <strong style={{ color: 'White' }}>Visual Representation:</strong>
+          <Heading mb="-15px" mt="10px" fontFamily="inter" fontSize="22px">Visual Representation:</Heading>
           <br />
           The system generates a 3D visualization of the packed container, helping you visualize how the boxes are arranged inside.
           <br />
@@ -76,7 +76,7 @@ const boxfitproData = {
       id: 3,
       content: (
         <div key={3}>
-          <strong style={{ color: 'White' }}>Percentage Filled:</strong>
+         <Heading mb="-15px" mt="10px" fontFamily="inter" fontSize="22px">Percentage Filled:</Heading>
           <br />
           It calculates the percentage of the container filled, giving you insights into space utilization.
           <br />
@@ -114,10 +114,10 @@ const boxfitproData = {
       content: (
         <div key={1}>
           <OrderedList>
-            <ListItem style={listItemStyle}><strong style={{ color: 'White' }}>Space Maximization:</strong> Optimize container use to reduce shipping costs and minimize wasted space.</ListItem>
-            <ListItem style={listItemStyle}><strong style={{ color: 'White' }}>Cost Efficiency:</strong> Lower operational expenses by requiring fewer containers, leading to substantial savings in shipping and storage costs.</ListItem>
-            <ListItem style={listItemStyle}><strong style={{ color: 'White' }}>Time Savings:</strong> Eliminate the need for time-consuming manual calculations, enabling faster decision-making and streamlined logistics.</ListItem>
-            <ListItem style={listItemStyle}><strong style={{ color: 'White' }}>Clear Visual Insights:</strong> Gain a visual representation of container packing, facilitating better logistics planning and helping you identify potential inefficiencies.</ListItem>
+            <ListItem pb="20px" style={listItemStyle}><Heading pb="10px"  mt="10px" fontFamily="inter" fontSize="22px">Space Maximization:</Heading> Optimize container use to reduce shipping costs and minimize wasted space.</ListItem>
+            <ListItem pb="20px" style={listItemStyle}><Heading pb="10px"  mt="10px" fontFamily="inter" fontSize="22px">Cost Efficiency:</Heading> Lower operational expenses by requiring fewer containers, leading to substantial savings in shipping and storage costs.</ListItem>
+            <ListItem pb="20px" style={listItemStyle}><Heading pb="10px"  mt="10px" fontFamily="inter" fontSize="22px">Time Savings:</Heading> Eliminate the need for time-consuming manual calculations, enabling faster decision-making and streamlined logistics.</ListItem>
+            <ListItem pb="20px" style={listItemStyle}><Heading pb="10px"  mt="10px" fontFamily="inter" fontSize="22px">Clear Visual Insights:</Heading> Gain a visual representation of container packing, facilitating better logistics planning and helping you identify potential inefficiencies.</ListItem>
           </OrderedList>
         </div>
       ),
