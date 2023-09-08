@@ -1,8 +1,8 @@
-import Logo from "./l0g0";
 import NextLink from 'next/link';
 import { Box, Container, Flex, Heading, IconButton, Link, Menu, MenuButton, MenuList, Stack, useColorModeValue } from "@chakra-ui/react";
 import  { HamburgerIcon } from '@chakra-ui/icons'
-import ThemeFlipper from "./themeFl1pp3r";
+import ThemeFlipper from "./themeFlipper";
+import Logo from './logo';
 
 
 const LinkItem = ({ href, path, children }) => {

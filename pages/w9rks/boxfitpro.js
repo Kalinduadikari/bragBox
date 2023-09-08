@@ -1,11 +1,12 @@
-import React from 'react';
-import { Container, List, ListItem, Flex, Image, Heading, Link, Box, Text, OrderedList, UnorderedList } from '@chakra-ui/react';
+import React, { useState } from 'react';
+import { Container, List, ListItem, Flex, Image, Heading, Link, Box, Text, OrderedList, UnorderedList,   useDisclosure   } from '@chakra-ui/react';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 import { motion } from 'framer-motion';
-import Layout from '../../components/layouts/sw1shyP9';
-import { WorksProvider } from '../../components/w9rkStruct';
+import Layout from '../../components/layouts/ScrollFXLayout';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import ImageModal from '../../components/ImageModal';
+import { WorksProvider } from '../../components/worksDetails';
 
 function changeFirstWordColor(sentence, word) {
   const index = sentence.indexOf(word);
@@ -123,6 +124,20 @@ const boxfitproData = {
       ),
     },
   ],
+  technologies: [
+    {
+      src: '/images/Python.png',
+      alt: 'Inkdrop'
+    },
+    {
+      src: '/images/Numpy.png',
+      alt: 'Inkdrop'
+    },
+    {
+      src: '/images/Matplotlib.png',
+      alt: 'Inkdrop',
+    }
+  ],
   
   stack: 'MongoDB | Express | NodeJS | React - MERN',
   firstGitHubLink: 'https://github.com/Kalinduadikari/boxFitPro',
@@ -138,7 +153,21 @@ const boxfitproData = {
   ],
 };
 
-const Boxfitpro = () => (
+
+
+
+const Boxfitpro = () => {
+  const [selectedImageIndex, setSelectedImageIndex] = useState(null);
+
+  const handleImageClick = (index) => {
+    setSelectedImageIndex(index);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedImageIndex(null);
+  };
+
+return(
   <WorksProvider worksData={boxfitproData}>
     <Layout title="Box">
       <Container>
@@ -215,6 +244,48 @@ const Boxfitpro = () => (
           </Box>
         </Flex>
 
+        <Flex justify="center" mt={-10} pb={12} pt={4}>
+          <Box>
+            <Text
+              css={{
+                background: 'linear-gradient(to right, #C04970, white, white)',
+                WebkitBackgroundClip: 'text',
+                color: 'transparent',
+                textIndent: '20px',
+                fontFamily: 'Inter',
+                fontSize: '30px',
+                fontWeight: 'bold',
+                marginLeft: '-118px'
+                
+              }}
+            >
+              Technologies Used:
+            </Text>
+            <Flex marginTop="30px" justify="center" alignItems="center" flexWrap="wrap">
+            {boxfitproData.technologies.map((image, index) => (
+              <motion.div 
+                key={index} 
+                initial={{ opacity: 0, scale: 0.8 }} 
+                animate={{ opacity: 1, scale: 1 }} 
+                exit={{ opacity: 0, scale: 0.8 }} 
+                whileHover={{ scale: 1.05 }}  
+                whileTap={{ scale: 0.95 }}    
+                 mx={2} 
+                my={4}
+                >
+                <Image 
+                  src={image.src} 
+                  alt={image.alt} 
+                  maxW={index === 2 ? "200px" : "80px"}
+                  rounded="lg" 
+                  boxShadow="lg" />
+              </motion.div>
+            ))}
+          </Flex>
+
+          </Box>
+        </Flex>
+
        
           <Flex justify="center" alignItems="center" flexWrap="wrap">
             {boxfitproData.images.map((image, index) => (
@@ -223,10 +294,10 @@ const Boxfitpro = () => (
                 initial={{ opacity: 0, scale: 0.8 }} 
                 animate={{ opacity: 1, scale: 1 }} 
                 exit={{ opacity: 0, scale: 0.8 }} 
-                whileHover={{ scale: 3.55 }} 
-                whileTap={{ scale: 0.95 }} 
+                
                  mx={2} 
                 my={4}
+                onClick={() => handleImageClick(index)}
                 >
                 <Image 
                   src={image.src} 
@@ -236,7 +307,9 @@ const Boxfitpro = () => (
                   boxShadow="lg" />
               </motion.div>
             ))}
+            
           </Flex>
+         
 
           <List ml={4} my={4}>
           <ListItem>
@@ -246,9 +319,17 @@ const Boxfitpro = () => (
             
             </ListItem>
             </List>
+            
       </Container>
     </Layout>
+    <ImageModal
+              isOpen={selectedImageIndex !== null}
+              onClose={handleCloseModal}
+              imageData={boxfitproData.images[selectedImageIndex]}
+            />
+
   </WorksProvider>
-);
+)
+};
 
 export default Boxfitpro;

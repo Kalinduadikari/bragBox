@@ -1,6 +1,6 @@
 import NextLink from 'next/link';
 import { Text, LinkBox, LinkOverlay, Heading, Box } from '@chakra-ui/react';
-import Para from './p4ra';
+import Para from './paragraph';
 
 export const ContentTemp = ({ children, id, title, lng, descr }) => (
   <LinkBox as="div">

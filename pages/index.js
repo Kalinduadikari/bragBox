@@ -1,13 +1,13 @@
 import { Box, Button, Container, Heading, Image, Link, Text, useColorModeValue } from "@chakra-ui/react";
-import Section from "../components/sect10n";
 import { motion, AnimatePresence } from "framer-motion"; 
-import Para from "../components/p4ra";
 import { ChevronRightIcon, } from "@chakra-ui/icons";
 import NextLink from 'next/link';
-import { BioSection, BioYear } from "../components/l1f3B1ts";
-import Layout from "../components/layouts/sw1shyP9";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter, faLinkedin, faGithub, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { BioSection, BioYear } from "../components/styledBioSection";
+import Layout from "../components/layouts/ScrollFXLayout";
+import Section from "../components/dynamicSectionLoader";
+import Para from "../components/paragraph";
 
 
 const Page = () => {

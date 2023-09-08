@@ -1,7 +1,8 @@
 import { Box, Container,} from "@chakra-ui/react";
-import Section from "../components/sect10n";
-import { ContentTemp } from "../components/red1r3ct";
-import Layout from "../components/layouts/sw1shyP9";
+import Section from "../components/dynamicSectionLoader";
+import { ContentTemp } from "../components/projectLink";
+import Layout from "../components/layouts/ScrollFXLayout";
+
 
 const Works = () => {
   return (

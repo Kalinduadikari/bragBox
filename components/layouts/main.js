@@ -1,14 +1,14 @@
 import { Suspense, useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import Head from 'next/head'
-import Navbar from '../n4vB4r'
+import Navbar from "../navigationbar";
 import { Box, Container } from '@chakra-ui/react'
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
-import Footer from "../f00t3r";
+import Footer from "../webFooter";
 
 
-const Model = dynamic(() => import("../ezy3d"), {
+const Model = dynamic(() => import("../model3d"), {
     ssr: false
 });
 

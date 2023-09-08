@@ -3,10 +3,11 @@ import { Container, Link as ChakraUILink, List, ListItem, Flex, Image, Heading, 
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 import { motion } from 'framer-motion';
 import { FiArrowRightCircle } from 'react-icons/fi';
-import Layout from '../../components/layouts/sw1shyP9';
-import { WorksProvider } from '../../components/w9rkStruct';
+import Layout from '../../components/layouts/ScrollFXLayout';
+import { WorksProvider } from '../../components/worksDetails';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+
 
 function changeFirstWordColor(sentence, word) {
   const index = sentence.indexOf(word);
