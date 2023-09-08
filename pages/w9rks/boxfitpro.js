@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, List, ListItem, Flex, Image, Heading, Link, Box, Text, OrderedList, UnorderedList,   useDisclosure   } from '@chakra-ui/react';
+import { Container, List, ListItem, Flex, Image, Heading, Link, Box, Text, OrderedList, UnorderedList } from '@chakra-ui/react';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 import { motion } from 'framer-motion';
 import Layout from '../../components/layouts/ScrollFXLayout';
