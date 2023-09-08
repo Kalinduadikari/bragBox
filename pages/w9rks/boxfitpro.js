@@ -244,19 +244,19 @@ return(
           </Box>
         </Flex>
 
+
+
         <Flex justify="center" mt={-10} pb={12} pt={4}>
           <Box>
             <Text
               css={{
-                background: 'linear-gradient(to right, #C04970, white, white)',
+                background: 'linear-gradient(to right, #C04970, #C04970, white)',
                 WebkitBackgroundClip: 'text',
                 color: 'transparent',
-                textIndent: '20px',
                 fontFamily: 'Inter',
                 fontSize: '30px',
                 fontWeight: 'bold',
-                marginLeft: '-118px'
-                
+                textAlign: 'center'
               }}
             >
               Technologies Used:
@@ -287,7 +287,7 @@ return(
         </Flex>
 
        
-          <Flex justify="center" alignItems="center" flexWrap="wrap">
+          <Flex marginTop="20px" justify="center" alignItems="center" flexWrap="wrap">
             {boxfitproData.images.map((image, index) => (
               <motion.div 
                 key={index} 
@@ -295,7 +295,7 @@ return(
                 animate={{ opacity: 1, scale: 1 }} 
                 exit={{ opacity: 0, scale: 0.8 }} 
                 
-                 mx={2} 
+                mx={2} 
                 my={4}
                 onClick={() => handleImageClick(index)}
                 >
