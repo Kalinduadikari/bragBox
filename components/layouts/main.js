@@ -44,11 +44,11 @@ const Main = ({ children, router }) => {
 
             <Navbar path={router.asPath} />
 
-            <Container maxW="container.md" pt={14} flexGrow={1}>
+            <Container maxW="100%" pt={14} flexGrow={1}>
 
             {!isPostsRoute && (
-                    <Box>
-                        <Canvas style={{ width: '100%', height: '320px' }}>
+                    <Box maxWidth="full">
+                        <Canvas style={{ width: '100%', height: '320px',}}>
                             <Suspense fallback={null}>
                                 <Model initialScale={initialModelScale} /> 
                             </Suspense>

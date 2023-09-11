@@ -3,7 +3,7 @@ import { useLoader, useFrame } from '@react-three/fiber';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
 const Model = ({ initialScale }) => {
-  const gltf = useLoader(GLTFLoader, '/EZ3D/Moon_1_3474.glb'); 
+  const gltf = useLoader(GLTFLoader, '/EZ3D/org.glb'); 
   const mesh = useRef();
   const [rotationSpeed, setRotationSpeed] = useState(0.6);
   const [scale, setScale] = useState(initialScale);
@@ -12,7 +12,7 @@ const Model = ({ initialScale }) => {
   const normalSpeed = 0.002;
 
   useEffect(() => {
-    setScale(initialScale * 0.5); 
+    setScale(initialScale * 70); 
   }, [initialScale]);
 
   useFrame(() => {
@@ -27,7 +27,7 @@ const Model = ({ initialScale }) => {
   });
 
   return (
-    <group position={[0, 0.1, 0]}>
+    <group position={[0, -2.4, 0]}>
       <primitive ref={mesh} object={gltf.scene} scale={[scale, scale, scale]} dispose={null} />
     </group>
   );
