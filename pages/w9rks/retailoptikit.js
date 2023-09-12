@@ -167,7 +167,7 @@ const retailoptikitData = {
               <ListItem pb="20px" style={listItemStyle}><Heading pb="10px"  mt="10px" fontFamily="inter" fontSize="22px">Marketing Efficiency:</Heading>  <Text opacity={sOpacity}>Association rule mining helps in creating targeted marketing strategies by identifying which products are often purchased together, leading to more effective cross-selling and upselling.</Text></ListItem>
               <ListItem pb="20px" style={listItemStyle}><Heading pb="10px"  mt="10px" fontFamily="inter" fontSize="22px">Competitive Advantage:</Heading>  <Text opacity={sOpacity}>Businesses using this model gain a competitive edge by staying ahead of market trends and consumer preferences through precise sales predictions.</Text></ListItem>
               <ListItem pb="20px" style={listItemStyle}><Heading pb="10px"  mt="10px" fontFamily="inter" fontSize="22px">Resource Optimization:</Heading>  <Text opacity={sOpacity}>By focusing resources on the most profitable and popular products, businesses can optimize their marketing and operational efforts.</Text></ListItem>
-              <ListItem pb="20px" style={listItemStyle}><Heading pb="10px"  mt="10px" fontFamily="inter" fontSize="22px">Scalability:</Heading><Text opacity={sOpacity}>The model's modular design allows for scalability and adaptability to evolving business needs and changing datasets.</Text></ListItem>
+              <ListItem pb="20px" style={listItemStyle}><Heading pb="10px"  mt="10px" fontFamily="inter" fontSize="22px">Scalability:</Heading><Text opacity={sOpacity}>The model&apos;s modular design allows for scalability and adaptability to evolving business needs and changing datasets.</Text></ListItem>
             </OrderedList>
           </div>
         ),
