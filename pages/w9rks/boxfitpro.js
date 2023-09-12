@@ -7,7 +7,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import ImageModal from '../../components/ImageModal';
 import { WorksProvider } from '../../components/worksDetails';
-import Para from '../../components/paragraph';
 
 function changeFirstWordColor(sentence, word) {
   const index = sentence.indexOf(word);

@@ -5,7 +5,6 @@ import { motion } from 'framer-motion';
 import Layout from '../../components/layouts/ScrollFXLayout';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import ImageModal from '../../components/ImageModal';
 import { WorksProvider } from '../../components/worksDetails';
 
 
@@ -46,16 +45,6 @@ const Retailoptikit = () => {
   const imageSrc = colorMode === "light" ? "/images/flogo.svg.png" : "/images/flogodark.svg.png";
 
 
-
-  const [selectedImageIndex, setSelectedImageIndex] = useState(null);
-
-  const handleImageClick = (index) => {
-    setSelectedImageIndex(index);
-  };
-
-  const handleCloseModal = () => {
-    setSelectedImageIndex(null);
-  };
 
   const FeatureItem = ({ text }) => (
     <ListItem color={fColor} fontFamily="Inter" opacity={fOpacity} fontSize="lg" mb="2">
@@ -331,11 +320,6 @@ return(
             
       </Container>
     </Layout>
-    <ImageModal
-              isOpen={selectedImageIndex !== null}
-              onClose={handleCloseModal}
-              imageData={retailoptikitData.images[selectedImageIndex]}
-            />
 
   </WorksProvider>
 )
