@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, List, ListItem, Flex, Image, Heading, Link, Box, Text, OrderedList, UnorderedList } from '@chakra-ui/react';
+import { Container, List, ListItem, Flex, Image, Heading, Link, Box, Text, OrderedList, UnorderedList, useColorModeValue } from '@chakra-ui/react';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 import { motion } from 'framer-motion';
 import Layout from '../../components/layouts/ScrollFXLayout';
@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import ImageModal from '../../components/ImageModal';
 import { WorksProvider } from '../../components/worksDetails';
+import Para from '../../components/paragraph';
 
 function changeFirstWordColor(sentence, word) {
   const index = sentence.indexOf(word);
@@ -24,27 +25,53 @@ function changeFirstWordColor(sentence, word) {
   );
 }
 
-const FeatureItem = ({ text }) => (
-  <ListItem color="#555" fontFamily="Inter" opacity="0.7" fontSize="lg" mb="2">
-    <Flex align="center">
-      {text}
-    </Flex>
-  </ListItem>
-);
 
-const FeatureList = ({ features }) => (
-  <UnorderedList ml="4" mt="4" styleType="none">
-    {features.map((feature, index) => (
-      <FeatureItem key={index} text={feature.content} />
-    ))}
-  </UnorderedList>
-);
 
   const listItemStyle = {
     marginBottom: '16px',  
   };
 
-// Data for ofsos
+
+
+
+
+const Boxfitpro = () => {
+  const colorMode = useColorModeValue("light", "dark"); 
+  const fColor = colorMode === "light" ? "black" : "grey";
+  const fOpacity = colorMode === "light" ? "0.5" : "0.7";
+  const sOpacity = colorMode === "light" ? "0.8" : "0.8";
+
+  const [selectedImageIndex, setSelectedImageIndex] = useState(null);
+
+  const handleImageClick = (index) => {
+    setSelectedImageIndex(index);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedImageIndex(null);
+  };
+
+
+
+  const FeatureItem = ({ text }) => (
+    <ListItem color= {fColor} fontFamily="Inter" opacity={fOpacity} fontSize="lg" mb="2">
+      <Flex align="center">
+        {text}
+      </Flex>
+    </ListItem>
+  );
+
+  
+  const FeatureList = ({ features }) => (
+    <UnorderedList ml="4" mt="4" styleType="none">
+      {features.map((feature, index) => (
+        <FeatureItem key={index} text={feature.content} />
+      ))}
+    </UnorderedList>
+  );
+
+
+  // Data for ofsos
 const boxfitproData = {
   title: 'Box-fit PRO',
   description: 'Box-fit PRO This project presents an advanced 3D Box Packing Algorithm, designed to assist companies in optimizing their container packing processes. The system takes container dimensions and a list of box sizes as inputs, and then efficiently calculates how many boxes can be placed inside the container while providing a visual representation of the arrangement!',
@@ -53,9 +80,9 @@ const boxfitproData = {
       id: 1,
       content: (
         <div key={1}>
-          <Heading mb="-15px" mt="10px" fontFamily="inter" fontSize="22px">Efficient Box Packing:</Heading>
+          <Heading mb="-15px" fontFamily="inter" fontSize="22px">Efficient Box Packing:</Heading>
           <br />
-          The algorithm sorts the boxes by volume, placing larger boxes first for better packing efficiency.
+          <Text opacity={sOpacity}>The algorithm sorts the boxes by volume, placing larger boxes first for better packing efficiency.</Text>
           <br />
           <br />
         </div>
@@ -65,9 +92,9 @@ const boxfitproData = {
       id: 2,
       content: (
         <div key={2}>
-          <Heading mb="-15px" mt="10px" fontFamily="inter" fontSize="22px">Visual Representation:</Heading>
+          <Heading mb="-15px" fontFamily="inter" fontSize="22px">Visual Representation:</Heading>
           <br />
-          The system generates a 3D visualization of the packed container, helping you visualize how the boxes are arranged inside.
+          <Text opacity={sOpacity}>The system generates a 3D visualization of the packed container, helping you visualize how the boxes are arranged inside.</Text>
           <br />
           <br />
         </div>
@@ -77,9 +104,9 @@ const boxfitproData = {
       id: 3,
       content: (
         <div key={3}>
-         <Heading mb="-15px" mt="10px" fontFamily="inter" fontSize="22px">Percentage Filled:</Heading>
+         <Heading mb="-15px" fontFamily="inter" fontSize="22px">Percentage Filled:</Heading>
           <br />
-          It calculates the percentage of the container filled, giving you insights into space utilization.
+          <Text opacity={sOpacity}>It calculates the percentage of the container filled, giving you insights into space utilization.</Text>
           <br />
         </div>
       ),
@@ -115,10 +142,10 @@ const boxfitproData = {
       content: (
         <div key={1}>
           <OrderedList>
-            <ListItem pb="20px" style={listItemStyle}><Heading pb="10px"  mt="10px" fontFamily="inter" fontSize="22px">Space Maximization:</Heading> Optimize container use to reduce shipping costs and minimize wasted space.</ListItem>
-            <ListItem pb="20px" style={listItemStyle}><Heading pb="10px"  mt="10px" fontFamily="inter" fontSize="22px">Cost Efficiency:</Heading> Lower operational expenses by requiring fewer containers, leading to substantial savings in shipping and storage costs.</ListItem>
-            <ListItem pb="20px" style={listItemStyle}><Heading pb="10px"  mt="10px" fontFamily="inter" fontSize="22px">Time Savings:</Heading> Eliminate the need for time-consuming manual calculations, enabling faster decision-making and streamlined logistics.</ListItem>
-            <ListItem pb="20px" style={listItemStyle}><Heading pb="10px"  mt="10px" fontFamily="inter" fontSize="22px">Clear Visual Insights:</Heading> Gain a visual representation of container packing, facilitating better logistics planning and helping you identify potential inefficiencies.</ListItem>
+            <ListItem pb="20px" style={listItemStyle}><Heading pb="10px"  mt="10px" fontFamily="inter" fontSize="22px">Space Maximization:</Heading>  <Text opacity={sOpacity}>Optimize container use to reduce shipping costs and minimize wasted space.</Text></ListItem>
+            <ListItem pb="20px" style={listItemStyle}><Heading pb="10px"  mt="10px" fontFamily="inter" fontSize="22px">Cost Efficiency:</Heading> <Text opacity={sOpacity}>Lower operational expenses by requiring fewer containers, leading to substantial savings in shipping and storage costs.</Text></ListItem>
+            <ListItem pb="20px" style={listItemStyle}><Heading pb="10px"  mt="10px" fontFamily="inter" fontSize="22px">Time Savings:</Heading> <Text opacity={sOpacity}>Eliminate the need for time-consuming manual calculations, enabling faster decision-making and streamlined logistics.</Text></ListItem>
+            <ListItem pb="20px" style={listItemStyle}><Heading pb="10px"  mt="10px" fontFamily="inter" fontSize="22px">Clear Visual Insights:</Heading> <Text opacity={sOpacity}>Gain a visual representation of container packing, facilitating better logistics planning and helping you identify potential inefficiencies.</Text></ListItem>
           </OrderedList>
         </div>
       ),
@@ -153,19 +180,6 @@ const boxfitproData = {
   ],
 };
 
-
-
-
-const Boxfitpro = () => {
-  const [selectedImageIndex, setSelectedImageIndex] = useState(null);
-
-  const handleImageClick = (index) => {
-    setSelectedImageIndex(index);
-  };
-
-  const handleCloseModal = () => {
-    setSelectedImageIndex(null);
-  };
 
 return(
   <WorksProvider worksData={boxfitproData}>
@@ -276,7 +290,7 @@ return(
                 <Image 
                   src={image.src} 
                   alt={image.alt} 
-                  maxW={index === 2 ? "200px" : "80px"}
+                  maxW={index === 2 ? "383.7px" : "77.1px"}
                   rounded="lg" 
                   boxShadow="lg" />
               </motion.div>
