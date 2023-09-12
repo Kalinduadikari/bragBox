@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Container, List, ListItem, Flex, Image, Heading, Link, Box, Text, OrderedList, UnorderedList, useColorModeValue } from '@chakra-ui/react';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 import { motion } from 'framer-motion';
