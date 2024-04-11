@@ -40,7 +40,7 @@ const Works = () => {
           p={8}
           borderRadius="md"
           parallaxSensitivity={0.15}
-          mt={0.5}
+          mt={19.5}
         >
           <Box>
             <ContentTemp id="retailoptikit" lng="PYTHON" title="Retail OptiKit" descr="Apriori Algorithm for retailers to identify Best-Selling Product Combinations and ARIMA Model for Demand Forecasting for OFSOS!!">
@@ -58,7 +58,7 @@ const Works = () => {
           p={8}
           borderRadius="md"
           parallaxSensitivity={0.15}
-          mt={0.5}
+          mt={19.5}
         >
           <Box>
             <ContentTemp id="ofsos" lng="JAVASCRIPT" title="OFSOS" descr="Advanced Inventory Management System for Seafood Retailers">
@@ -75,7 +75,7 @@ const Works = () => {
           p={8}
           borderRadius="md"
           parallaxSensitivity={0.15}
-          mt={0.5}
+          mt={19.5}
         >
            <Box>
             <Flex align="center">

@@ -1,4 +1,4 @@
-import { Box, Button, Container, Heading, Image, Link, Text, useColorModeValue } from "@chakra-ui/react";
+import { Box, Button, Container, Heading, Image, Link, Text, useColorModeValue, Flex, } from "@chakra-ui/react";
 import { motion, AnimatePresence } from "framer-motion"; 
 import { ChevronRightIcon, } from "@chakra-ui/icons";
 import NextLink from 'next/link';
@@ -70,7 +70,7 @@ const Page = () => {
             <Heading as="h3" variant="section-title" ml='-49px'>
               Work
             </Heading>
-            <Para>I&apos;m Kalindu Adikari, a recent graduate with a passion for data science. Eager to embark on this exciting journey, I&apos;m here to leverage my skills and knowledge to unlock the potential hidden within data. Inspired by fields like neuroscience, psychology, and the wisdom of thinkers like Marcus Aurelius, I&apos;m ready to dive into the world of data and analytics. Let&apos;s explore the endless possibilities of data science together and make a meaningful impact.</Para>
+            <Para>Kalindu Adikari, a recent graduate propelled by a fervent passion for AI and Data Science, is excited to embark on this journey. The Telos is to apply skills to address challenges through AI applications and extract valuable insights from data.</Para>
             <Box align='center' my={4}>
             <Link as={NextLink} href="/w9rks" passHref>
                      <Button rightIcon={<ChevronRightIcon/>} colorScheme="gray">
@@ -113,7 +113,7 @@ const Page = () => {
         </Section>
 
 
-
+{/* This is a Section component with various props 
           <Section
             hoverVariants={{
               scale: 1.05,
@@ -129,7 +129,7 @@ const Page = () => {
         </Heading>
         <Para text-align="left">#🎙️Tunin&apos; in to podcasts &nbsp; #groovin to the beats&nbsp;  #flippin pages&nbsp;  #spillin_my_mind_on_twitter&nbsp; #🏋️Sweatin it out</Para>
         </Section>
-
+*/}
 
         <Section
             hoverVariants={{
@@ -143,24 +143,28 @@ const Page = () => {
             mt={0.5}
           >
         <Heading variant="section-title" ml='-49px'>
-        The book I&apos;m currently wrapped up in:
+        The books I&apos;m currently wrapped up in:
         
         </Heading>
         <Para text-align="left"></Para>
+        <Flex justifyContent="center">
         <Image
           borderColor="transparent"
           borderWidth="2px"
           borderStyle="solid"
-          borderRadius="full" 
+          borderRadius="20px" 
           display="block" 
           mx="auto" 
           mt={4} 
-          src="/images/book.JPG"
+          src="/images/boook.jpg"
           alt="Book Image"
           loading="lazy"
           boxShadow="lg" 
-          maxWidth="300px" 
+          maxWidth="150px" 
+         
         />
+       
+        </Flex>
         </Section>
 
 

@@ -14,7 +14,7 @@ const Model = dynamic(() => import("../model3d"), {
 
 const Main = ({ children, router }) => {
     const initialModelScale = 0.1 * 0.1; 
-    const isPostsRoute = router.asPath === '/w9rks';
+    const isPostsRoute = router.asPath === '/w9rks' || router.asPath ==='/posts';
 
 
     const [contentHeight, setContentHeight] = useState(0);
