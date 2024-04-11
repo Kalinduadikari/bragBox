@@ -1,6 +1,5 @@
 import NextLink from 'next/link';
 import { Text, LinkBox, LinkOverlay, Heading, Box, useBreakpointValue } from '@chakra-ui/react';
-import Para from './paragraph';
 import { motion } from 'framer-motion';
 
 export const ContentTemp = ({ children, id, title, lng, date }) => {

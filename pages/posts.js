@@ -6,8 +6,6 @@ import Layout from "../components/layouts/ScrollFXLayout";
 import { motion } from 'framer-motion';
 
 const Posts = () => {
-    
-  const colorMode = useColorModeValue("light", "dark");
   const [currentPage, setCurrentPage] = useState(0);
   const [pageWidth, setPageWidth] = useState(0);
   const containerRef = useRef(null);
