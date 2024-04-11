@@ -1,4 +1,4 @@
-import { Box, Container, Flex, useColorModeValue } from "@chakra-ui/react";
+import { Box, Container, Flex } from "@chakra-ui/react";
 import { useEffect, useRef, useState } from "react";
 import Section from "../components/dynamicSectionLoader";
 import { ContentTemp } from "../components/postLink";
